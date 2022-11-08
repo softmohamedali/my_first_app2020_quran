@@ -13,5 +13,6 @@ class MainActivity2 : AppCompatActivity() {
         var standard=intent.extras!!.getString("standard_full")
         textView.text=name
         textView2.text=standard
+
     }
 }

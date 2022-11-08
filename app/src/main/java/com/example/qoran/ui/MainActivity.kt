@@ -41,9 +41,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu,menu)
         var searchManger=getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        (menu!!.findItem(R.id.button).actionView as SearchView).apply {
+        (menu!!.findItem(R.id.button).actionView as androidx.appcompat.widget.SearchView).apply {
             setSearchableInfo(searchManger.getSearchableInfo(componentName))
-            setOnQueryTextListener(object :SearchView.OnQueryTextListener{
+            setOnQueryTextListener(object :androidx.appcompat.widget.SearchView.OnQueryTextListener{
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     return true
                 }
